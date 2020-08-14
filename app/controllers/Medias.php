@@ -57,4 +57,10 @@ class Medias extends CoreController
             redirect('medias');
         }
     }
+    public function edit($data = [])
+    {
+        //var_dump($data);
+
+        $this->view("medias/edit", $data);
+    }
 }

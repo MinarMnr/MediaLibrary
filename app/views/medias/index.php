@@ -15,9 +15,8 @@
   <div class="card-group">
     <div class="row">
       <?php foreach ($data['images'] as $image) : ?>
-
         <div class="card col-md-4">
-          <?php echo '<img class="card-img-top" src="' . $image . '" /><br />'; ?>
+          <a href="<?php echo URLROOT1; ?>/medias/edit/<?php echo basename($image) ?>"><?php echo '<img class="card-img-top" src="' . $image . '" /><br /></a>'; ?>
         </div>
 
       <?php endforeach; ?>
