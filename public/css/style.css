@@ -1,0 +1,6 @@
+.gallary {
+  max-width: 600px;
+  overflow-y: auto;
+  height: 600px;
+  padding-top: 10px;
+}

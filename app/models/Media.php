@@ -9,14 +9,21 @@ class Media
     public function upload($tmp_dir, $upload_dir, $coverpic)
     {
         $results = move_uploaded_file($tmp_dir, $upload_dir . $coverpic);
-        var_dump($results);
+        //var_dump("upload", $results);
         return $results;
     }
     public function getAllImages()
     {
-        $dir_name = "img/";
+        $images = array();
+        $dir_name = "gallary/";
         $images = glob($dir_name . "*");
-        var_dump($images);
+        $time = array();
+        foreach ($images as $file) {
+            $time[] = filemtime($file);
+        }
+
+        array_multisort($time,  SORT_DESC, $images);
+
         return $images;
     }
 }
