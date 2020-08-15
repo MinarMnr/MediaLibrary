@@ -4,4 +4,5 @@ Crop feature not much.
 MVC Architecture.
 Localhost. 
 No drag and drop option for image upload.
+PHP/VanillaJs
  
