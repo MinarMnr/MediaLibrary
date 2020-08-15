@@ -12,7 +12,6 @@ class Medias extends CoreController
         $data = [
             'images' => $images
         ];
-        //var_dump("index=====", $images);
         $this->view("medias/index", $data);
     }
 
@@ -38,6 +37,10 @@ class Medias extends CoreController
                     // rename uploading image
                     $coverpic = rand(1000, 1000000) . "." . $imgExt;
 
+                    //gallary folder create if not exist 
+                    if (!file_exists('gallary/')) {
+                        mkdir('gallary/', 0777, true);
+                    }
                     // allow valid image file formats
                     if (in_array($imgExt, $valid_extensions)) {
                         // Check file size '5MB'

@@ -58,7 +58,7 @@ function download() {
     let link = document.getElementById("link");
     link.setAttribute(
       "download",
-      "edited" + Math.floor(Math.random() * 10000 + 1) + ".png"
+      "download" + Math.floor(Math.random() * 10000 + 1) + ".png"
     );
     link.setAttribute(
       "href",

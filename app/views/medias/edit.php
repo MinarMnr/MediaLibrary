@@ -1,4 +1,4 @@
-<?php require APPROOT1 . '/views/inc/header.php'; ?>
+<?php require APPROOT . '/views/inc/header.php'; ?>
 
 <section class="main">
     <div class="container">
@@ -8,7 +8,7 @@
                     <aside>
                         <h3>Image Editor</h3>
                         <form id="slider-form">
-                            <p><a href="<?php echo URLROOT1; ?>" class="btn btn-light"><i class="fa fa-backward" aria-hidden="true"></i> Back</a></p>
+                            <p><a href="<?php echo URLROOT; ?>" class="btn btn-light"><i class="fa fa-backward" aria-hidden="true"></i> Back</a></p>
                             <p>
                                 <label for="gs">Grayscale</label>
                                 <input id="gs" name="gs" type="range" min="" max="100" value="0" class="slider">
@@ -39,7 +39,7 @@
             </div>
 
             <div class="col-sm-6 main-outer">
-                <img src="<?php echo URLROOT1; ?>/gallary/<?php echo $data; ?>" id="targetimage" alt="">
+                <img src="<?php echo URLROOT; ?>/gallary/<?php echo $data; ?>" id="targetimage" alt="">
                 <canvas id="myCanvas" width=400 height=400 hidden></canvas>
                 <a id="link"></a>
 
@@ -48,5 +48,5 @@
     </div>
 
 </section>
-<script src="<?php echo URLROOT1; ?>/js/main.js"> </script>
-<?php require APPROOT1 . '/views/inc/footer.php'; ?>
+<script src="<?php echo URLROOT; ?>/js/main.js"> </script>
+<?php require APPROOT . '/views/inc/footer.php'; ?>

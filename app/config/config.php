@@ -1,8 +1,8 @@
 <?php
 
 //root
-define('APPROOT1', dirname(dirname(__FILE__)));
+define('APPROOT', dirname(dirname(__FILE__)));
 
-define('URLROOT1', "http://localhost/MediaLibrary");
+define('URLROOT', "http://localhost/MediaLibrary");
 
-define('SITENAME1', "Minar Media");
+define('SITENAME', "Minar Media");
