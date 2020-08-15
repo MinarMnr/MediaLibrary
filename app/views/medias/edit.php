@@ -40,7 +40,8 @@
                 <div class="img-area">
 
                     <img src="<?php echo URLROOT1; ?>/gallary/<?php echo $data; ?>" id="targetimage" alt="">
-
+                    <canvas id="myCanvas" width=400 height=400></canvas>
+                    <a id="link"></a>
                 </div>
             </div>
 
@@ -48,4 +49,5 @@
 
     </div>
 </section>
+<script src="<?php echo URLROOT1; ?>/js/main.js"> </script>
 <?php require APPROOT1 . '/views/inc/footer.php'; ?>

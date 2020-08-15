@@ -37,16 +37,33 @@ sliderform.addEventListener("reset", function () {
 });
 
 //download function
-let sliderform1 = document.getElementById("save");
-sliderform1.addEventListener("click", function () {
+let save = document.getElementById("save");
+save.addEventListener("click", function () {
   setTimeout(function () {
     download();
   }, 0);
 });
+
 function download() {
-  console.log("click");
   let src = targetimage.getAttribute("src");
-  console.log(src);
-  targetimage.setAttribute("download", src);
-  targetimage.click();
+  var myCanvas = document.getElementById("myCanvas");
+  var img = document.createElement("img");
+  var ctx = myCanvas.getContext ? myCanvas.getContext("2d") : null;
+  ctx.filter = targetimage.style.filter;
+  img.src = src;
+
+  img.onload = function () {
+    ctx.drawImage(img, 0, 0, myCanvas.width, myCanvas.height);
+
+    let link = document.getElementById("link");
+    link.setAttribute(
+      "download",
+      "edited" + Math.floor(Math.random() * 10000 + 1) + ".png"
+    );
+    link.setAttribute(
+      "href",
+      myCanvas.toDataURL("image/png").replace("image/png", "image/octet-stream")
+    );
+    link.click();
+  };
 }
