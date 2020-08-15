@@ -1,7 +1,7 @@
 <?php require APPROOT1 . '/views/inc/header.php'; ?>
 <div class="container">
   <div class="row">
-    <div class="col d-flex justify-content-center">
+    <div class="col d-flex justify-content-center" id="image-form">
       <form enctype="multipart/form-data" action="<?php echo URLROOT1; ?>/medias/add" method="post">
         <input type="file" name="coverimg" required="required" />
         <input type="submit" name="cover_up" class="btn btn-primary" value="Upload" />

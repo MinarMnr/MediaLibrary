@@ -85,7 +85,7 @@ function cropped() {
   img.src = src;
 
   img.onload = function () {
-    ctx.drawImage(img, 150, 150, myCanvas.width, myCanvas.height);
+    ctx.drawImage(img, 133, 171, 104, 124, 121, 20, 207, 204);
 
     let link = document.getElementById("link");
     link.setAttribute(
