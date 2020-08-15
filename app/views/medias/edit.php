@@ -31,6 +31,7 @@
 
                         <button type="reset">Reset</button>
                         <button type="button" id="save">Download</button>
+                        <button type="button" id="crop">Crop</button>
 
                     </form>
                 </aside>

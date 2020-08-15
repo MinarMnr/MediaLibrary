@@ -67,3 +67,35 @@ function download() {
     link.click();
   };
 }
+
+//crop function
+let crop = document.getElementById("crop");
+crop.addEventListener("click", function () {
+  setTimeout(function () {
+    cropped();
+  }, 0);
+});
+
+function cropped() {
+  let src = targetimage.getAttribute("src");
+  var myCanvas = document.getElementById("myCanvas");
+  var img = document.createElement("img");
+  var ctx = myCanvas.getContext ? myCanvas.getContext("2d") : null;
+  ctx.filter = targetimage.style.filter;
+  img.src = src;
+
+  img.onload = function () {
+    ctx.drawImage(img, 150, 150, myCanvas.width, myCanvas.height);
+
+    let link = document.getElementById("link");
+    link.setAttribute(
+      "download",
+      "croped" + Math.floor(Math.random() * 10000 + 1) + ".png"
+    );
+    link.setAttribute(
+      "href",
+      myCanvas.toDataURL("image/png").replace("image/png", "image/octet-stream")
+    );
+    link.click();
+  };
+}
